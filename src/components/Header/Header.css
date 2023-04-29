@@ -1,0 +1,37 @@
+.header-content {
+    min-height: 56vh;
+    flex-direction: column;
+    background-image: url("../images/robot.png");
+    animation-name: movingRobot;
+    animation-duration: 10s;
+    background-repeat: no-repeat;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.header-title {
+    font-size: 4.2rem;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(201, 143, 29);
+}
+
+.header-text {
+    margin-top: -1.8rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 770px;
+}
+
+@keyframes movingRobot {
+    0% {
+        background-position:0 100px;
+    }
+    90% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 100% -800px;
+
+    }
+}

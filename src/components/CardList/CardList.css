@@ -1,0 +1,132 @@
+.shiplist,
+.ship-details {
+    padding: 3rem 0;
+    background: rgb(9, 12, 88);
+    background: linear-gradient(187deg, rgba(9, 12, 88, 1) 0%, rgba(72, 35, 117, 0.8800770308123249) 90%);
+}
+
+.shiplist-content {
+    gap: 3rem;
+}
+
+.ship-item {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background-color: #ffffff2e;
+    box-shadow: rgba(0, 0, 0, 0) 0px 5px 15px 0px;
+    transition: var(--transition);
+    color: rgb(203, 189, 169);
+}
+
+.ship-item:hover {
+    box-shadow: rgba(246, 246, 246, 0.536) 0px 5px 15px 0px;
+}
+
+.ship-item-img img {
+    max-width: 250px;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.ship-item-info {
+    margin-top: 1rem;
+}
+
+.ship-item-info-item.title {
+    line-height: 1.4;
+    margin-bottom: 0.1rem;
+    color: #d5a607;
+}
+
+.loadMore {
+    color: rgb(226, 223, 218);
+    font-family: 'Dancing Script', cursive;
+    background-color: #d5a607;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 27px;
+    font-weight:500;
+    box-shadow: rgba(0, 0, 0, 0) 0px 5px 15px 0px;
+    margin-top: 50px;
+    width: 170px;
+    transition: background-color 0.5s ease;
+}
+
+.loadMore:hover {
+    box-shadow: rgba(246, 246, 246, 0.247) 0px 5px 15px 0px;
+    background: rgb(9, 12, 88);
+
+
+}
+
+.btnClass {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.detailbtn {
+    color: rgb(226, 223, 218);
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: rgb(214 176 121);
+
+}
+
+.end-of-list {
+    margin-top: 50px;
+    font-size: 22px;
+    color: #d5a607;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 600px) {
+    .shiplist-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .shiplist-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ship-item-img img {
+        max-width: 150px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .shiplist-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ship-item-img img {
+        max-width: 228px;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    z-index: 999;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+  }
+.scroll-to-top img{
+    width: 40px;
+    transition: all 0.5s ease;
+
+}
+  .scroll-to-top img:hover{
+    width: 70px;
+    box-shadow: rgba(246, 246, 246, 0.679) 0px 5px 15px 0px;
+    bottom: 50px;
+    border-radius: 80px;
+  }
+
+  
