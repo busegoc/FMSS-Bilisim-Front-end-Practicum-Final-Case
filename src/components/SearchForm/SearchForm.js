@@ -28,7 +28,7 @@ const SearchForm = () => {
       if (filteredShips.length === 0) {
         setResultTitle(`No results found for "${tempSearchTerm}". Please check your ship name or model.`);
         setShips(originalShips);
-        setShowAllButton(false);
+        setShowAllButton(true);
 
 
       } else {
