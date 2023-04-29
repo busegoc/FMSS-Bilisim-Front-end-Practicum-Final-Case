@@ -33,7 +33,7 @@ const SearchForm = () => {
 
       } else {
         setShips(filteredShips);
-        setResultTitle(`Showing Results for "${tempSearchTerm}"`);
+        setResultTitle(`Showing Results for "${tempSearchTerm}": ${filteredShips.length} items found`);
         setShowAllButton(true);
 
       }

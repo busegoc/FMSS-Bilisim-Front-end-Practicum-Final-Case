@@ -1,13 +1,13 @@
 
 import React from 'react';
-import Header from '../../components/Header/Header';
 import { Outlet } from 'react-router-dom';
+import CardList from '../../components/CardList/CardList';
 
 const Home = () => {
   return (
     <main>
-        <Header />
-        <Outlet />
+        <CardList/>
+        <Outlet/>
     </main>
   )
 }
