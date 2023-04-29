@@ -9,6 +9,8 @@ import btnImg from "../images/up-arrow.png"
 const CardList = () => {
   const { ships, loading, resultTitle, loadMore } = useGlobalContext();
   const [isVisible, setIsVisible] = useState(false);
+
+  
   useEffect(() => {
     function handleScroll() {
       if (window.pageYOffset > 300) {

@@ -13,7 +13,6 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [resultTitle, setResultTitle] = useState("");
   const [images, setImages] = useState(coverImg);
-  const [matchedImgs, setMatchedImgs] = useState([]);
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(8);
   const [show, setShow] = useState(false);
@@ -53,11 +52,7 @@ const AppProvider = ({ children }) => {
     setImages(coverImg);
   }, []);
 
-  useEffect(() => {
-    const matched = images.filter(item => ships.some(ship => ship.name === item.name));
-    setMatchedImgs(matched);
-  }, [ships, images]);
-
+  
   useEffect(() => {
     fetchShips();
   }, [searchTerm, fetchShips]);
@@ -66,6 +61,8 @@ const AppProvider = ({ children }) => {
     const newShips = originalShips.slice(0, limit);
     setShips(newShips);
   }, [originalShips, limit]);
+
+  
   const loadMore = () => {
     setLimit(limit + 8);
     setPage(page + 1);
@@ -82,7 +79,6 @@ const AppProvider = ({ children }) => {
       loading,
       ships,
       images,
-      matchedImgs,
       setSearchTerm,
       resultTitle,
       setResultTitle,
